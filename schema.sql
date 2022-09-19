@@ -42,6 +42,12 @@ CREATE TABLE vets (
     date_of_graduation date
 );
 
+ -- Add an email column to your owners table
+ALTER TABLE
+    owners
+ADD
+    COLUMN email VARCHAR(120);
+
 -- association table == join table(contains forign keys)
 CREATE TABLE specializations (
     vets_id INT REFERENCES vets (vets_id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -52,8 +58,3 @@ CREATE TABLE specializations (
     date_of_visit date
 )
 
- -- Add an email column to your owners table
-ALTER TABLE
-    owners
-ADD
-    COLUMN email VARCHAR(120);
