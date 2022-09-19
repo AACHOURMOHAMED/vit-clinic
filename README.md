@@ -1,4 +1,6 @@
+
 # vit-clinic
+
 
 > This is a databse creation project This project has PostgreSQL quesries for vet clinic table and schema.
 
@@ -14,7 +16,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
+
 👤 **Mohamed aachour**
+
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
@@ -25,6 +29,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
 
 ## 🤝 Contributing
 
