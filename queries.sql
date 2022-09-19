@@ -438,3 +438,32 @@ ORDER BY
     COUNT(species.species_id) DESC
 LIMIT
     1;
+
+-- explain anazying
+EXPLAIN ANALYSE
+SELECT
+    COUNT(*)
+FROM
+    visits
+where
+    animal_id = 4;
+
+CREATE INDEX animal_id ON visits(animal_id) EXPLAIN ANALYSE
+SELECT
+    *
+FROM
+    visits
+where
+    vet_id = 2;
+
+CREATE INDEX vet_id ON visits(vet_id);
+
+EXPLAIN ANALYSE
+SELECT
+    *
+FROM
+    owners
+where
+    email = 'owner_18327@mail.com';
+
+CREATE INDEX email on owners(email)
