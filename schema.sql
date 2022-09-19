@@ -51,3 +51,9 @@ CREATE TABLE specializations (
     id INT REFERENCES animals(id) ON DELETE CASCADE ON UPDATE CASCADE,
     date_of_visit date
 )
+
+ -- Add an email column to your owners table
+ALTER TABLE
+    owners
+ADD
+    COLUMN email VARCHAR(120);
