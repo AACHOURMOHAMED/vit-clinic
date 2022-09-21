@@ -29,3 +29,24 @@ CREATE TABLE patients (
     treatment_id INT,
     CONSTRAINT TREATMENT_FK FOREIGN KEY (treatment_id) REFERENCES treatments(id) ON DELETE CASCADE
 )
+
+-- Create JOIN table for medical_histories and treatments
+CREATE TABLE history_treatment (
+  history_id INT,
+  treatment_id INT,
+  CONSTRAINT fk_history FOREIGN KEY history_id REFERENCES medical_histories(id),
+  CONSTRAINT fk_treatment FOREIGN KEY treatment_id REFERENCES treatments(id)
+);
+
+-- Create INDEX for the foreign keys
+CREATE INDEX patient_id_index ON medical_histories(patient_id);
+
+CREATE INDEX medical_history__id_index ON invoices(medical_history__id);
+
+CREATE INDEX invoice_id_index ON invoice_items(invoice_id);
+
+CREATE INDEX treatment_id_index ON invoice_items(treatment_id);
+
+CREATE INDEX history_id_index ON history_treatment(history_id);
+
+CREATE INDEX treatment_id_index ON history_treatment(treatment_id);
